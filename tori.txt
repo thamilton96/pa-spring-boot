@@ -2,4 +2,3 @@ Let's get started writing some awesome spring boot applications
 
 Twinkle Twinkle Little Star 
 how I wonder what you are
-up above the world so bright
