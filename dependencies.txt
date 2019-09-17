@@ -4,3 +4,4 @@ JPA
 MySQL
 ThymeLeaf
 Web
+Lombok
