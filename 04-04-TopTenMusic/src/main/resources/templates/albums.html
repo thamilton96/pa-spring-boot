@@ -22,22 +22,17 @@
       <a class="nav-link" href="/">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/disney">Disney</a>
+      <a class="nav-link" href="/song">Songs</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/tolkien">Tolkien</a>
+      <a class="nav-link" href="/album">Albums</a>
     </li>
   </ul>
 </nav>
+<div class="jumbotron text-center">
 
-<div class="jumbotron text-center"
-style ="height:200px;
-        background:transparent url('/img/sevendwarfs.png') no-repeat center center /cover"
-        >
-
-
-<h1>Home Page</h1>
-<h2></h2>
+<h1>Album Charts</h1>
+<h2 th:text="${numberOfTopTens}"></h2>
 <br />
 
 </div>
@@ -45,7 +40,22 @@ style ="height:200px;
 
 <div class="container">
 
-<p>This site will contain information about dwarfs.</p>
+<p>This site will contain information about album charts.</p>
+
+<table class="table table-striped">
+       <thead>
+           <tr>
+               <th>Name</th>
+               <th>Picture</th>
+           </tr>  
+       </thead>
+       <tbody>
+           <tr th:each ="topten: ${toptens}">
+               <td th:text="${topten.name}">Taylor</td>
+               <td><img src="../static/img/Thorin.png" th:src="@{/img/} + ${dwarf.image}"></img></td>
+           </tr>
+       </tbody>
+</table>
 
 </div>
 

@@ -1,4 +1,4 @@
-package uk.ac.belfastmet.topten;
+package uk.ac.belfastmet.toptens;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

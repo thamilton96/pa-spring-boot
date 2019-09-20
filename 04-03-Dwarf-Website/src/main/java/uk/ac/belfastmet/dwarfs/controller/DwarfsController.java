@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import uk.ac.belfastmet.dwarfs.service.DwarfService;
 
 @Controller
-@RequestMapping
+@RequestMapping 
 public class DwarfsController {
 	
 	@GetMapping()
