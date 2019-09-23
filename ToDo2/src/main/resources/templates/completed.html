@@ -22,18 +22,18 @@
       <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="/completed">Completed Tasks</a>
+      <a class="nav-link" href="/completed>">Completed Tasks</a>
     </li>
   </ul>
 </nav>
 
 <div class="jumbotron text-center"
 style ="height:200px;
-        background:transparent url('/img/todolist.webp') no-repeat center center /cover"
+        background:transparent url('/img/sevendwarfs.png') no-repeat center center /cover"
         >
 
 
-<h1></h1>
+<h1>Completed Tasks</h1>
 <h2 th:text="${message}"> </h2>
 <br />
 
@@ -43,7 +43,6 @@ style ="height:200px;
 <div class="container">
 
 <p></p>
-
 <table class="table table-striped">
        <thead>
            <tr>
@@ -56,7 +55,7 @@ style ="height:200px;
        </thead>
        <tbody>
            <tr th:each ="todo2: ${todo2}">
-               <td th:text="${todo2.author}"></td>
+               <td th:text="${todo2.author}">Taylor</td>
                <td th:text="${todo2.task}">Taylor</td>
                <td th:text="${todo2.priority}">Taylor</td>
                <td th:text="${todo2.status}">Taylor</td>
@@ -64,7 +63,6 @@ style ="height:200px;
            </tr>
        </tbody>
 </table>
-
 
 </div>
 

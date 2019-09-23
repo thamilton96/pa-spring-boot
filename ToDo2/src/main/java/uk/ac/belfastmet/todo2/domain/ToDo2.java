@@ -5,7 +5,7 @@ public class ToDo2 {
 	private String author;
 	private String task;
 	private String priority;
-	private boolean status;
+	private String status;
 	private String dueDate ;
 	
 	public ToDo2() {
@@ -13,8 +13,8 @@ public class ToDo2 {
 	
 	}
 	
-
-	public ToDo2(String author, String task, String priority, boolean status, String dueDate) {
+	
+	public ToDo2(String author, String task, String priority, String status, String dueDate) {
 		super();
 		this.author = author;
 		this.task = task;
@@ -48,11 +48,11 @@ public class ToDo2 {
 		this.priority = priority;
 	}
 
-	public boolean isStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(boolean status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 
@@ -64,6 +64,10 @@ public class ToDo2 {
 		this.dueDate = dueDate;
 	}
 	
+	public String toString()
+	{
+		return author + "" + status;
+	}
 	
 
 }

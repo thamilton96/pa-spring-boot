@@ -8,14 +8,14 @@ import uk.ac.belfastmet.dwarfs.domain.Dwarf;
 
 @Service
 public class DwarfService {
-	
+
 	private ArrayList<Dwarf> disneyDwarfs;
 	private ArrayList<Dwarf> tolkienDwarfs;
-	
+
 	public ArrayList<Dwarf> getDisneyDwarfs(){
-		
+
 		this.disneyDwarfs = new ArrayList<Dwarf>();
-		
+
 		// add dwarfs here!
 		this.disneyDwarfs.add(new Dwarf("Sleepy", "Disney", "Sleepy.png"));
 		this.disneyDwarfs.add(new Dwarf("Happy", "Disney", "Happy.png"));
@@ -24,15 +24,15 @@ public class DwarfService {
 		this.disneyDwarfs.add(new Dwarf("Doc", "Disney", "Doc.png"));
 		this.disneyDwarfs.add(new Dwarf("Grumpy", "Disney", "Grumpy.png"));
 		this.disneyDwarfs.add(new Dwarf("Sneezy", "Disney", "Sneezy.png"));
-		
-		
+
+
 		return this.disneyDwarfs;
 	}
-	
+
 	public ArrayList<Dwarf> getTolkienDwarfs(){
-		
+
 		this.tolkienDwarfs = new ArrayList<Dwarf>();
-		
+
 		// add dwarfs here!
 		this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
 		this.tolkienDwarfs.add(new Dwarf("Kili", "Tolkien", "Kili.png"));
@@ -48,11 +48,11 @@ public class DwarfService {
 		this.tolkienDwarfs.add(new Dwarf("Gloin", "Tolkien", "Gloin.png"));
 		this.tolkienDwarfs.add(new Dwarf("Bofur", "Tolkien", "Bofur.png"));
 
-		
+
 		return this.tolkienDwarfs;
 	}
-	
-	
-	
+
+
+
 
 }
