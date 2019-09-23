@@ -45,14 +45,16 @@
 <table class="table table-striped">
        <thead>
            <tr>
-               <th>Name</th>
-               <th>Picture</th>
+               <th>Artist</th>
+               <th>Type</th>
+               <th>Song</th>
+               <th>image</th>
            </tr>  
        </thead>
        <tbody>
            <tr th:each ="topten: ${toptens}">
-               <td th:text="${topten.name}">Taylor</td>
-               <td><img src="../static/img/Thorin.png" th:src="@{/img/} + ${dwarf.image}"></img></td>
+               <td th:text="${topten.song}">Taylor</td>
+               <td><img src="../static/img/Aitch.jpg" th:src="@{/img/} + ${topten.image}"></img></td>
            </tr>
        </tbody>
 </table>

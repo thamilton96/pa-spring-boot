@@ -22,16 +22,16 @@
       <a class="nav-link" href="/">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/singles">Singles</a>
+      <a class="nav-link" href="/song">Songs</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/albums">Albums</a>
+      <a class="nav-link" href="/album">Albums</a>
     </li>
   </ul>
 </nav>
 <div class="jumbotron text-center">
 
-<h1>Top Ten Albums</h1>
+<h1>Top Ten Singles</h1>
 <h2 th:text="${numberOfToptens}"></h2>
 <br />
 
@@ -40,19 +40,23 @@
 
 <div class="container">
 
-<p>This site will contain information about Tolkien's dwarfs.</p>
+<p>This site will contain information about chart songs.</p>
 
 <table class="table table-striped">
        <thead>
            <tr>
-               <th>Name</th>
-               <th>Picture</th>
+                <th>Song</th>
+               <th>Artist</th>
+               <th>Album</th>
+               <th>image</th>
            </tr>  
        </thead>
        <tbody>
            <tr th:each ="topten: ${toptens}">
-               <td th:text="${topten.name}">Taylor</td>
-               <td><img src="../static/img/Thorin.png" th:src="@{/img/} + ${topten.image}"></img></td>
+               <td th:text="${topten.song}">Taylor</td>
+               <td th:text="${topten.artist}">Taylor</td>
+               <td th:text="${topten.album}">Taylor</td>
+               <td><img src="../static/img/Billie.jpg" th:src="@{/img/} + ${topten.image}"></img></td>
            </tr>
        </tbody>
 </table>
