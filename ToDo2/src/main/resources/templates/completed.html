@@ -29,7 +29,7 @@
 
 <div class="jumbotron text-center"
 style ="height:200px;
-        background:transparent url('/img/sevendwarfs.png') no-repeat center center /cover"
+        background:transparent url('/img/todolist.jpg') no-repeat center center /cover"
         >
 
 
@@ -55,11 +55,11 @@ style ="height:200px;
        </thead>
        <tbody>
            <tr th:each ="todo2: ${todo2}">
-               <td th:text="${todo2.author}">Taylor</td>
-               <td th:text="${todo2.task}">Taylor</td>
-               <td th:text="${todo2.priority}">Taylor</td>
-               <td th:text="${todo2.status}">Taylor</td>
-               <td th:text="${todo2.dueDate}">Taylor</td>
+               <td th:text="${todo2.author}"></td>
+               <td th:text="${todo2.task}"></td>
+               <td th:text="${todo2.priority}"></td>
+               <td th:text="${todo2.status}"></td>
+               <td th:text="${todo2.dueDate}"></td>
            </tr>
        </tbody>
 </table>

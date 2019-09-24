@@ -12,14 +12,24 @@ import uk.ac.belfastmet.todo2.service.ToDo2Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 
+ * @author HAM19171866
+ *
+ */
 
 @Controller
 @RequestMapping
 public class ToDo2Controller {
 	
-	
 	Logger logger = LoggerFactory.getLogger(ToDo2Controller.class);
 	ToDo2 todo2 = new ToDo2();
+	
+	/**
+	 * 
+	 * @param model
+	 * @return homepage
+	 */
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String homePage(Model model) 
@@ -29,12 +39,18 @@ public class ToDo2Controller {
 		logger.info(todo2.toString());
 		
 		ToDo2Service todo2Service = new ToDo2Service();
-		model.addAttribute("pageTitle", "Home");
+		model.addAttribute("pageTitle", "Index");
 		model.addAttribute("todo2", todo2Service.getHomeToDo2());
 		model.addAttribute("message", "");
 		
 		return "index";
 	}
+	
+	/**
+	 * 
+	 * @param model
+	 * @return
+	 */
 	
 	@RequestMapping(value = "/completed", method = RequestMethod.GET)
 	public String CompletedPage(Model model)
@@ -44,11 +60,6 @@ public class ToDo2Controller {
 		
 		return "completed";
 		
-	
 	}
-	
-	
-	
-	
 
 }

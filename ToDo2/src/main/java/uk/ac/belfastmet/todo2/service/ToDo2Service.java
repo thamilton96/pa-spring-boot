@@ -1,5 +1,5 @@
 package uk.ac.belfastmet.todo2.service;
-
+// no java doc
 import java.util.ArrayList;
 
 import uk.ac.belfastmet.todo2.domain.ToDo2;
@@ -17,10 +17,9 @@ public class ToDo2Service {
 		this.homeToDo2.add(new ToDo2("Harry", "Get milk", "High", "Not bought", "Today"));
 		this.homeToDo2.add(new ToDo2("Hannah", "Send email to lecturer", "Medium", "Draft created", "Next Week"));
 		
-		
 		return this.homeToDo2;
 	}
 		
-	}
+}
 	
 

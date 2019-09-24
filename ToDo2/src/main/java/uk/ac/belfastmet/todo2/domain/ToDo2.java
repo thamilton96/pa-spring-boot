@@ -1,5 +1,5 @@
 package uk.ac.belfastmet.todo2.domain;
-
+// no java doc
 public class ToDo2 {
 	
 	private String author;
@@ -13,15 +13,13 @@ public class ToDo2 {
 	
 	}
 	
-	
 	public ToDo2(String author, String task, String priority, String status, String dueDate) {
 		super();
 		this.author = author;
 		this.task = task;
 		this.priority = priority;
 		this.status = status;
-		this.dueDate = dueDate;
-		
+		this.dueDate = dueDate;	
 	}
 
 	public String getAuthor() {
@@ -69,5 +67,4 @@ public class ToDo2 {
 		return author + "" + status;
 	}
 	
-
 }
