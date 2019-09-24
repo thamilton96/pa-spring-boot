@@ -58,11 +58,11 @@ style ="height:200px;
        </thead>
        <tbody>
            <tr th:each ="todo2: ${todo2}">
-               <td th:text="${todo2.author}"></td>
-               <td th:text="${todo2.task}"></td>
-               <td th:text="${todo2.priority}"></td>
-               <td th:text="${todo2.status}"></td>
-               <td th:text="${todo2.dueDate}"></td>
+               <td th:text="${todo2.author}">Author</td>
+               <td th:text="${todo2.task}">Task</td>
+               <td th:text="${todo2.priority}">Priority</td>
+               <td th:text="${todo2.status}">Status</td>
+               <td th:text="${todo2.dueDate}">dueDate</td>
            </tr>
        </tbody>
 </table>

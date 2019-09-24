@@ -1,5 +1,6 @@
 package uk.ac.belfastmet.todo2.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
@@ -22,6 +23,9 @@ import org.slf4j.LoggerFactory;
 @RequestMapping
 public class ToDo2Controller {
 	
+	@Autowired
+	private ToDo2Service todo2Service;
+	
 	Logger logger = LoggerFactory.getLogger(ToDo2Controller.class);
 	ToDo2 todo2 = new ToDo2();
 	
@@ -35,19 +39,21 @@ public class ToDo2Controller {
 	public String homePage(Model model) 
 	{
 		
+		
 		logger.info("Getting Home Page");
 		logger.info(todo2.toString());
 		
-		ToDo2Service todo2Service = new ToDo2Service();
 		model.addAttribute("pageTitle", "Index");
 		model.addAttribute("todo2", todo2Service.getHomeToDo2());
 		model.addAttribute("message", "");
+		
+		todo2Service.getNumberOfTask();
 		
 		return "index";
 	}
 	
 	/**
-	 * 
+	 * method for retrieving homepage
 	 * @param model
 	 * @return
 	 */

@@ -1,7 +1,19 @@
 package uk.ac.belfastmet.todo2.domain;
-// no java doc
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name = "task")
 public class ToDo2 {
 	
+	private long id;
 	private String author;
 	private String task;
 	private String priority;
@@ -21,7 +33,19 @@ public class ToDo2 {
 		this.status = status;
 		this.dueDate = dueDate;	
 	}
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public long getId() {
+		return id;
+	}
+	
+	public void setId(long id) {
+		this.id = id;
+	}
+	
 
+	@Column(name = "author")
 	public String getAuthor() {
 		return author;
 	}
@@ -30,6 +54,7 @@ public class ToDo2 {
 		this.author = author;
 	}
 
+	@Column(name = "task")
 	public String getTask() {
 		return task;
 	}
@@ -38,6 +63,7 @@ public class ToDo2 {
 		this.task = task;
 	}
 
+	@Column(name = "priority")
 	public String getPriority() {
 		return priority;
 	}
@@ -46,6 +72,7 @@ public class ToDo2 {
 		this.priority = priority;
 	}
 
+	@Column(name = "status")
 	public String getStatus() {
 		return status;
 	}
@@ -54,6 +81,7 @@ public class ToDo2 {
 		this.status = status;
 	}
 
+	@Column(name = "duedate")
 	public String getDueDate() {
 		return dueDate;
 	}
