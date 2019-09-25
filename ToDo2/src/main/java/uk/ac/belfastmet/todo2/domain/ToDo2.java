@@ -25,6 +25,7 @@ public class ToDo2 {
 	private String author;
 	private String task;
 	private String priority;
+	private String taskDescription;
 	private String status;
 	private String dueDate;
 
@@ -40,19 +41,23 @@ public class ToDo2 {
 	 * @param priority type String
 	 * @param status type String
 	 * @param dueDate type String
+	 * @param author 
 	 */
-	public ToDo2(String author, String task, String priority, String status, String dueDate) {
+	public ToDo2(String author, String task, String priority, String taskDescription, String status, String dueDate) {
 		super();
 		//keyword this used to differentiate instance variable from local variable
 		this.author = author;
 		this.task = task;
 		this.priority = priority;
+		this.taskDescription = taskDescription;
 		this.status = status;
 		this.dueDate = dueDate;
+		
 	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public long getId() {
 		return id;
 	}
@@ -61,16 +66,25 @@ public class ToDo2 {
 		this.id = id;
 	}
 
-	@Column(name = "author")
-	public String getAuthor() {
+	@Column(name = "user")
+	public String getAuthor() {                              
 		return author;
 	}
 
 	public void setAuthor(String author) {
-		this.author = author;
+	this.author = author;
+	}
+	
+	@Column(name = "description")
+	public String getTaskDescription() {
+		return taskDescription;
 	}
 
-	@Column(name = "task")
+	public void setTaskDescription(String taskDescription) {
+	this.taskDescription = taskDescription;
+	}
+
+	@Column(name = "name")
 	public String getTask() {
 		return task;
 	}

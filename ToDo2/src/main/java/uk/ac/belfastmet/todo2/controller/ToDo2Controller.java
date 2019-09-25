@@ -47,15 +47,16 @@ public class ToDo2Controller {
 
 		model.addAttribute("pageTitle", "Index");
 		model.addAttribute("todo2", todo2Service.getHomeToDo2());
+		//model.addAttribute("task", ToDo2Service.getNumberofTask());
 		model.addAttribute("message", "");
 
-		todo2Service.getNumberOfTask();
+		//todo2Service.getNumberOfTask();
 
 		return "index";
 	}
 
 	/**
-	 * This method is for retrieving the completed webpage
+	 * This method is for retrieving the completed web page
 	 * 
 	 * @param model
 	 * @return
