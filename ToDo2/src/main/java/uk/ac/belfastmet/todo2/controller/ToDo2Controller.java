@@ -20,52 +20,54 @@ import org.slf4j.LoggerFactory;
  */
 
 @Controller
+// controller requires a method which is matched to url
 @RequestMapping
 public class ToDo2Controller {
-	
+
 	@Autowired
 	private ToDo2Service todo2Service;
-	
+
+	/**
+	 * Logger helps to find out problem in code
+	 */
 	Logger logger = LoggerFactory.getLogger(ToDo2Controller.class);
 	ToDo2 todo2 = new ToDo2();
-	
+
 	/**
 	 * 
 	 * @param model
 	 * @return homepage
 	 */
-	
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String homePage(Model model) 
-	{
-		
-		
+	public String homePage(Model model) {
+
 		logger.info("Getting Home Page");
 		logger.info(todo2.toString());
-		
+
 		model.addAttribute("pageTitle", "Index");
 		model.addAttribute("todo2", todo2Service.getHomeToDo2());
 		model.addAttribute("message", "");
-		
+
 		todo2Service.getNumberOfTask();
-		
+
 		return "index";
 	}
-	
+
 	/**
-	 * method for retrieving homepage
+	 * This method is for retrieving the completed webpage
+	 * 
 	 * @param model
 	 * @return
 	 */
-	
+
 	@RequestMapping(value = "/completed", method = RequestMethod.GET)
-	public String CompletedPage(Model model)
-	{
+	public String CompletedPage(Model model) {
 		logger.info("Getting Completed Page");
 		logger.info(todo2.toString());
-		
+
 		return "completed";
-		
+
 	}
 
 }
